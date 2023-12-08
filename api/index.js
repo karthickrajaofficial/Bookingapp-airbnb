@@ -128,7 +128,7 @@ app.post('/api/logout', (req,res) => {
 });
 
 
-app.post('/upload-by-link', async (req,res) => {
+app.post('/api/upload-by-link', async (req,res) => {
   const {link} = req.body;
   const newName = 'photo' + Date.now() + '.jpg';
   await imageDownloader.image({
