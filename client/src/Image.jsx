@@ -6,7 +6,7 @@ export default function Image({ src, ...rest }) {
     imageUrl = src.replace('s3://', 'https://booking-appkarthick.s3.amazonaws.com/');
   } else {
     // Assuming it's a relative path
-    imageUrl = 'http://localhost:4000/uploads/' + src;
+    imageUrl = 'http://localhost:40000/uploads/' + src;
   }
 
   return <img {...rest} src={imageUrl} alt={''} />;
