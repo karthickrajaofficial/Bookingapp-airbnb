@@ -5,7 +5,6 @@ import Image from "../Image";
 
 const IndexPage = () => {
   const [places, setPlaces] = useState([]);
-  
 
   useEffect(() => {
     axios.get('/places').then(response => {
@@ -14,7 +13,7 @@ const IndexPage = () => {
   }, []); // This is where the dependencies array should be placed
 
   return (
-    <div className="mt-8 grid gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+    <div className="mt-20 grid gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
       {places.length > 0 && places.map((place,index) => (
           <Link to ={'/place/'+place._id} key={index}>
             <div className="bg-gray-500 mb-2 rounded-2xl flex">
